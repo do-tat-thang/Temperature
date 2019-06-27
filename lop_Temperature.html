@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>Fahrenheit:<samp id="doF"></samp></p>
+<p>Kelvin :<samp id="doC"></samp></p>
+<script>
+    function Temperature (C) {
+        this.C = C ;
+        this.xetC = function (C) {
+            this.C =C ;
+        };
+        this.Fahrenheit = function () {
+            let F = (this.C*1.8)+32 ;
+            return F ;
+        };
+        this.Kelvin = function () {
+            let K = this.C +273 ;
+            return K ;
+        };
+    }
+    let h = new Temperature ();
+    h.xetC(25);
+    document.getElementById("doF").innerHTML=h.Fahrenheit();
+    document.getElementById("doC").innerHTML=h.Kelvin() ;
+</script>
+
+</body>
+
+</html>
